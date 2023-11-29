@@ -1,1 +1,4 @@
 .git
+
+# Ignore node_modules folder
+.vs
