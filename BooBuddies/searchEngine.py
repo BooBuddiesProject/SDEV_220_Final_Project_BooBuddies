@@ -1,8 +1,7 @@
 import pandas as pd
 
 #need to add an input to search page taking string values in a tuple
-
-#test should print payment hours and parking csv data using radials
+#test should print payment hours and parking csv data using radial
 search_Parameters = []
 
 def search_Data():
@@ -11,7 +10,8 @@ def search_Data():
     for parameter in search_Parameters:
         #going through the different types of data
         if parameter == "payment":
-            payment_data = pd.read_csv("Restaurant/chefmozaccepts.csv", index_col="placeID")
+            payment_data = pd.read_csv("Restaurant/chefmozaccepts.csv")
+
             search_result += payment_data
             continue
 

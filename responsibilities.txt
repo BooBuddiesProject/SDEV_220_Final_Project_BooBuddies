@@ -1,2 +1,7 @@
-mkirk - update search page to use radials based off of what the user wants to search for
-lea - add graphs using rating_final and geoplaces csvs pulling out the name column of geoplaces using the placeID found in both rating_final and geoplaces
+mkirk - update search page to use radials based off of what the user wants to search for i found this super helpful and may be better than 
+my original idea
+https://www.youtube.com/watch?v=PWEl1ysbPAY
+
+lea - add graphs using the rating_final numbers and taking the name from the geoplaces2 csv using the placeID that is the same in both
+to find the highest ranking restaurants. you can use plotting from the pandas and matplotlib. here is a site i looked up to see some code example
+https://www.w3schools.com/python/pandas/pandas_plotting.asp

@@ -1,0 +1,25 @@
+start by using git pull on the terminal using bash terminal to make sure your have the right files and requirements.
+if you dont have bash terminal on vs code you can download it in the extensions. 
+look at screenshot 1 for help
+
+then you will want to go to the top bar where it shows the folder project.
+look at screenshot 2 for help
+
+next you will type a > key in that bar and select python: create Environment 
+Venv
+Delete and recreate
+interpreter shoudl be the one on appdata\local\programs not the one from microsoft
+look at screenshot 3 for help
+
+make sure to checkmark on the BooBuddies\requirements.txt file in the dependencies tab
+look at screenshot 4 for help
+
+hit ok and let it go
+
+i then downloaded the powershell extension to run the Activate.ps1 file from the Scripts file directly
+also make sure you have Rainbow CSV as that is a big help
+look at screenshot 5
+
+look at screenshot 6 for running the Venv directly
+
+
