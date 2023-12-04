@@ -1,0 +1,2 @@
+mkirk - update search page to use radials based off of what the user wants to search for
+lea - add graphs using rating_final and geoplaces csvs pulling out the name column of geoplaces using the placeID found in both rating_final and geoplaces
