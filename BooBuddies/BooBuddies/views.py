@@ -1,7 +1,7 @@
 """
 Routes and views for the flask application.
 """
-
+import pandas as pd
 from datetime import datetime
 from flask import render_template, request, url_for
 from BooBuddies import app
@@ -10,9 +10,34 @@ from BooBuddies import app
 @app.route('/home', methods =["GET",'PUT', "POST"])
 def home():
     if request.method == "POST":         
-       search_string = request.form.get("search-keyword")
-       print(search_string)
-       return "You searched for: " + str(search_string) 
+        search_string = request.form.get("search-keyword")
+
+        #search_list should be the filters used to find what type of restaurant
+        search_list = ['afghan', 'african', 'american', 'armenian', 'asian', 'australian', 'austrian', 'bagels', 'bakery', 'bar', 'barpubbrewery', 'barbecue', 'basque', 'brazilian', 'breakfastbrunch', 'british', 'burgers', 'burmese', 'cafecoffeeshop', 'cafeteria', 'cajuncreole', 'california', 'caribbean', 'chinese', 'contemporary', 'continentaleuropean', 'delisandwiches', 'desserticecream', 'diner', 'dutchbelgian', 'easterneuropean', 'ethiopian', 'family', 'fastfood', 'finedining', 'french', 'game', 'german', 'greek', 'hotdogs', 'international', 'italian', 'japanese', 'juice', 'korean', 'latinamerican', 'mediterranean', 'mexican', 'mongolian', 'organichealthy', 'persian', 'pizzeria', 'polish', 'regional', 'seafood', 'soup', 'southern', 'southwestern', 'spanish', 'steaks', 'sushi', 'thai','turkish', 'vegetarian', 'vietnamese']
+
+        def search_Data():
+            df = pd.read_csv("Restaurant/chefmozcuisine.csv")
+    
+            filtered_df = df["Rcuisine"] 
+
+            nomatch = "No Match Was Found"
+
+            for item in filtered_df:
+                if item == search_string:
+                    search_result = item
+                    noresult = "False"
+                    return search_result
+                    
+                else:
+                    noresult = "True"
+                    continue
+
+                if noresult == "True":
+                    print(nomatch)
+                else:
+                    print(search_result)
+
+        return search_Data()
     
     """Renders the home page."""
     return render_template(
