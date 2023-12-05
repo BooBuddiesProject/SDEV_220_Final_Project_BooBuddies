@@ -5,7 +5,15 @@
 <div class="jumbotron">
     <h1>Restaurant Finder</h1>
     <p class="lead"> Restaurant Finder blah blah blah blah blah blah blah blah blah blah blah blahblah blah blah    </p>
-    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Search Now &raquo;</a></p>
+ 
+
+    <form class="search-form" action="{{ url_for("home")}}" method='POST'>
+        <input class="search-field" type='text' name='search-keyword' placeholder="Search for restaurant or food..." required>
+        <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    &nbsp;&nbsp;
+    <!--<p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Search Now &raquo;</a></p>-->
 </div>
 
 <div class="row">
