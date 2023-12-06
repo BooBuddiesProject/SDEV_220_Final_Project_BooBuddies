@@ -22,7 +22,7 @@ def home():
 
             nomatch = "No Match Was Found"
 
-            for item in filtered_df:
+            for item in df:
                 if item == search_string:
                     search_result = item
                     noresult = "False"
@@ -33,7 +33,9 @@ def home():
                     continue
 
                 if noresult == "True":
-                    print(nomatch)
+                    search_result = nomatch
+                    print(search_result)
+                    
                 else:
                     print(search_result)
 
