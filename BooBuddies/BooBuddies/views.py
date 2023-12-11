@@ -15,7 +15,7 @@ def home():
         #search_list should be the filters used to find what type of restaurant
         search_list = ['afghan', 'african', 'american', 'armenian', 'asian', 'australian', 'austrian', 'bagels', 'bakery', 'bar', 'barpubbrewery', 'barbecue', 'basque', 'brazilian', 'breakfastbrunch', 'british', 'burgers', 'burmese', 'cafecoffeeshop', 'cafeteria', 'cajuncreole', 'california', 'caribbean', 'chinese', 'contemporary', 'continentaleuropean', 'delisandwiches', 'desserticecream', 'diner', 'dutchbelgian', 'easterneuropean', 'ethiopian', 'family', 'fastfood', 'finedining', 'french', 'game', 'german', 'greek', 'hotdogs', 'international', 'italian', 'japanese', 'juice', 'korean', 'latinamerican', 'mediterranean', 'mexican', 'mongolian', 'organichealthy', 'persian', 'pizzeria', 'polish', 'regional', 'seafood', 'soup', 'southern', 'southwestern', 'spanish', 'steaks', 'sushi', 'thai','turkish', 'vegetarian', 'vietnamese']
 
-        def search_Data():
+        def search_Cuisine():
             df = pd.read_csv("Restaurant/chefmozcuisine.csv")
     
             filtered_df = df["Rcuisine"] 
@@ -32,14 +32,14 @@ def home():
                     noresult = "True"
                     continue
 
-                if noresult == "True":
-                    search_result = nomatch
-                    print(search_result)
+            if noresult == "True":
+                search_result = nomatch
+                print(search_result)
                     
-                else:
-                    print(search_result)
+            else:
+                print(search_result)
 
-        return search_Data()
+        return search_Cuisine()
     
     """Renders the home page."""
     return render_template(
