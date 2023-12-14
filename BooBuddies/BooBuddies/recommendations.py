@@ -2,14 +2,25 @@ import pandas as pd
 
 class Recommendation:
 
-    def __init__(self, placeID, cuisine, rating, latitude, longitude, name, price):
-        self.placeID = placeID
-        self.cuisine = cuisine
-        self.rating = rating
-        self.latitude = latitude
-        self.longitude = longitude
-        self.name = name
-        self.price = price
+    def __init__(self, newRec):
+        self.placeID = newRec["placeID"]
+        self.cuisine = newRec["Rcuisine"]
+        self.rating = newRec["rating"]
+        self.latitude = newRec["latitude"]
+        self.longitude = newRec["longitude"]
+        self.name = newRec["name"]
+        self.price = newRec["price"]
 
-def get_recs(df, cuisine_option):
-    results = df.data[df.data["Rcuisine"].str.contains(cuisine_option)]
+def get_recs(df, args):
+    cuisine_option = args.get("search_Foodtype" , "all").lower()
+    if cuisine_option == "all":
+        results = df.data
+    else:
+        results = df.data[df.data["Rcuisine"].str.contains(cuisine_option)]
+
+    recs = []
+    for result in results.to_dict("records"):
+        recs.append(Recommendation(result))
+
+    return recs
+    

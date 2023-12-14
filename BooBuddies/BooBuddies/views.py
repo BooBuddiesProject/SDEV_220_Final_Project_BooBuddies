@@ -8,6 +8,7 @@ from datetime import datetime
 from flask import render_template, request, url_for
 from BooBuddies import app
 from .data import foodtypes_list, search_Cuisine
+from . import recommendations, dataframe
 
 @app.route('/', methods =["GET",'PUT', "POST"])
 @app.route('/home', methods =["GET",'PUT', "POST"])
@@ -70,14 +71,12 @@ def about():
 @app.route('/search')
 def search():
     """Renders the search results."""
-    cuisine_option = search_FoodType
-    df = DataFrame()
-    results = recommendations.get_recs(df, cuisine_option)
+    args = request.args
+    df = dataframe.DataFrame()
+    results = recommendations.get_recs(df, args)
     return render_template(
         'search.html',
         title='Search',
         year=datetime.now().year,
-        message = results
+        results = results
     )
-
-

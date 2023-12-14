@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 
 class DataFrame:
         
@@ -8,9 +9,11 @@ class DataFrame:
             pd.options.display.max_rows = None
             pd.options.display.max_colwidth = None
 
-            df_cuisine = pd.read_csv("BooBuddies\Restaurant\chefmozcuisine.csv")
-            df_geo = pd.read_csv("BooBuddies\Restaurant\geoplaces2.csv")
-            df_rating = pd.read_csv(r"BooBuddies\Restaurant\rating_final.csv")
+            filename = Path(__file__).parent 
+
+            df_cuisine = pd.read_csv(filename / "data/chefmozcuisine.csv")
+            df_geo = pd.read_csv(filename / "data/geoplaces2.csv")
+            df_rating = pd.read_csv(filename / "data/rating_final.csv")
 
             #combine the csv's into one dataframe and clean the data
             df_combo = df_cuisine.merge(df_geo, on ="placeID").merge(df_rating, on = "placeID")
@@ -18,4 +21,3 @@ class DataFrame:
             df_combo = df_combo.eval("rating = rating + food_rating + service_rating")
             df_combo = df_combo[["placeID","Rcuisine", "rating","latitude", "longitude", "name", "price"]]
             self.data = df_combo
-

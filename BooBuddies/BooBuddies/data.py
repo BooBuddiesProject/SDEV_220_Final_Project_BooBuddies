@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+from pathlib import Path
 # import os
 
 datapath = "./BooBuddies/data/"
@@ -8,7 +9,9 @@ def foodtypes_list():
     # cwd = os.getcwd()
     # print(cwd)
 
-    file = open(datapath +'foodtypes.csv',"r")
+    filename = Path(__file__).parent / "data/foodtypes.csv"
+
+    file = open(filename,"r")
     # type(file)
     data = list(csv.reader(file, delimiter=","))
     rows = []

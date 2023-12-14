@@ -4,6 +4,10 @@
 
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
+{% for result in results %}
+    <p>The restaurant name is {{result.name}}</p>
+    
+{% endfor %}
 
 <p>Use this area to provide additional information.</p>
 

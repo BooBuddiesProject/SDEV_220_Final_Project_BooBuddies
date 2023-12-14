@@ -7,7 +7,7 @@
     <p class="lead"> Find a Restaurant Near You  </p>
  
 
-    <form class="search-form" action="{{ url_for("home")}}" method='POST'>
+    <form class="search-form" action="{{ url_for('search') }}">
         <select class="search-field" name="search_Foodtype" id="selectvalue">
             Select Food Type...
             {% for n in foodtypes %}
