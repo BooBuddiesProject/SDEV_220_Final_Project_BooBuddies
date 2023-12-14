@@ -77,12 +77,7 @@ def search():
         'search.html',
         title='Search',
         year=datetime.now().year,
-<<<<<<< Updated upstream
-        message='This site is under construction...'
-    )
-=======
         message = results
     )
 
 
->>>>>>> Stashed changes
