@@ -9,7 +9,6 @@ from flask import render_template, request, url_for
 from BooBuddies import app
 from .data import foodtypes_list, search_Cuisine
 
-
 @app.route('/', methods =["GET",'PUT', "POST"])
 @app.route('/home', methods =["GET",'PUT', "POST"])
 def home():
@@ -19,9 +18,9 @@ def home():
     # This kicks off the search
     if request.method == "POST":   
        search_FoodType=request.form.get("search_Foodtype")
-       search_City = request.form.get("search-City")
-       search_State = request.form.get("search-State")
-       search_Country = request.form.get("search-Country")
+       search_City = request.form.get("search_City")
+       search_State = request.form.get("search_State")
+       search_Country = request.form.get("search_Country")
        search_string=search_City + " " + search_State + " " + search_Country + " " + search_FoodType
        
        print( search_Cuisine(search_FoodType))
@@ -70,10 +69,20 @@ def about():
 
 @app.route('/search')
 def search():
-    """Renders the about page."""
+    """Renders the search results."""
+    cuisine_option = search_FoodType
+    df = DataFrame()
+    results = recommendations.get_recs(df, cuisine_option)
     return render_template(
         'search.html',
         title='Search',
         year=datetime.now().year,
+<<<<<<< Updated upstream
         message='This site is under construction...'
     )
+=======
+        message = results
+    )
+
+
+>>>>>>> Stashed changes
