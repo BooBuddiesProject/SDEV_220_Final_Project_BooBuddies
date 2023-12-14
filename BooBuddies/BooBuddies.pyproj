@@ -28,7 +28,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BooBuddies\dataload.py" />
+    <Compile Include="BooBuddies\data.py" />
     <Compile Include="runserver.py" />
     <Compile Include="BooBuddies\__init__.py" />
     <Compile Include="BooBuddies\views.py" />

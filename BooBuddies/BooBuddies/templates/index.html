@@ -15,9 +15,10 @@
             {% endfor %}
         </select>
 
-        <input class="search-field" type='text' name='search-City' placeholder="City..." required>
-        <input class="search-field" type='text' name='search-State' placeholder="State..." required>
-        <input class="search-field" type='text' name='search-Country' placeholder="Country..." required>
+
+        <input class="search-field" type='text' name='search-City' value="{{ sel_City }}" placeholder="City..." required>
+        <input class="search-field" type='text' name='search-State' value="{{ sel_State }}" placeholder="State..." required>
+        <input class="search-field" type='text' name='search-Country' value="{{ sel_Country }}" placeholder="Country..." required>
         <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
     </form>
 
