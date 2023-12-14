@@ -4928,19 +4928,23 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 2.1428571435;
-  color: inherit;
-  background-color: #eeeeee;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    background-image: linear-gradient(to right, yellow 5%, red);
+    /*background-image: linear-gradient(to right, red, yellow);*/
+    /*background-color: #CF1020;*/
+    /*background-color: #eeeeee;*/
 }
 
 .jumbotron h1 {
-  line-height: 1;
-  color: inherit;
-}
+        line-height: 1;
+        color: inherit;
+        text-shadow: 1.5px 1.5px white;
+ }
 
 .jumbotron p {
   line-height: 1.4;

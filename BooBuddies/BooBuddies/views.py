@@ -65,7 +65,7 @@ def about():
         'about.html',
         title='About',
         year=datetime.now().year,
-        message='This site is under construction...'
+        message='This site is designed to help you find food based on type near you.'
     )
 
 @app.route('/search')

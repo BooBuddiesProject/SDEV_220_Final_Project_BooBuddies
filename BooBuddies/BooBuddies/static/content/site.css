@@ -85,6 +85,7 @@ form.search-form button {
 @media (max-width: 768px) {
     form.search-form button {
         position: relative;
+        width: 78%;
     }
 
     form.search-form select {
@@ -97,3 +98,21 @@ form.search-form button {
         width: 100%;
     }
     }
+
+
+@media (max-width: 500px) {
+    form.search-form button {
+        position: relative;
+        width: 78%;
+    }
+
+    form.search-form select {
+        position: relative;
+        width: 100%;
+    }
+
+    form.search-form input[type=text] {
+        position: relative;
+        width: 100%;
+    }
+}
