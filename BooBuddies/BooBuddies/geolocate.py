@@ -1,11 +1,10 @@
 import geopy as gp
 
-loc = gp.Nominatim(user_agent="Boolocate")
+class Geolocation
 
-#enter the location name prefered city name
-get_loc = loc.geocode()
+    __init__(self):
+    loc = gp.Nominatim(user_agent="Boolocate")
+    get_loc = loc.geocode(search_city, search_state)
 
-print(get_loc.address)
-print(get_loc.latitude)
-print(get_loc.longitude)
+
 

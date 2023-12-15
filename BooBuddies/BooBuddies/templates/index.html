@@ -4,7 +4,7 @@
 
 <div class="jumbotron">
     <h1>Restaurant Finder</h1>
-    <p class="lead"> Find a Restaurant Near You  </p>
+    <p class="lead"> Find a Restaurant Near You!</p>
  
 
     <form class="search-form" action="{{ url_for('search') }}">
@@ -18,7 +18,6 @@
 
         <input class="search-field" type='text' name='search-City' value="{{ sel_City }}" placeholder="City..." required>
         <input class="search-field" type='text' name='search-State' value="{{ sel_State }}" placeholder="State..." required>
-        <input class="search-field" type='text' name='search-Country' value="{{ sel_Country }}" placeholder="Country..." required>
         <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
     </form>
 

@@ -21,10 +21,10 @@ def home():
        search_FoodType=request.form.get("search_Foodtype")
        search_City = request.form.get("search_City")
        search_State = request.form.get("search_State")
-       search_Country = request.form.get("search_Country")
-       search_string=search_City + " " + search_State + " " + search_Country + " " + search_FoodType
+
+       search_string=search_City + " " + search_State + " " + search_FoodType
        
-       print( search_Cuisine(search_FoodType))
+       print(search_Cuisine(search_FoodType))
 
        return render_template(
         'index.html',
@@ -34,11 +34,8 @@ def home():
         sel_Foodtype=search_FoodType,
         sel_City=search_City,
         sel_State=search_State,
-        sel_Country=search_Country,
     )
-       return "You searched for: " + str(search_string) 
     
- 
     """Renders the home page."""
     return render_template(
         'index.html',
@@ -46,7 +43,6 @@ def home():
         year=datetime.now().year,
         foodtypes= foodtypelist,
     )
-
 
 @app.route('/contact')
 def contact():

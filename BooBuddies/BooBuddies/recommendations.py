@@ -12,15 +12,15 @@ class Recommendation:
         self.price = newRec["price"]
 
 def get_recs(df, args):
-    cuisine_option = args.get("search_Foodtype" , "all").lower()
-    if cuisine_option == "all":
+    cuisine_option = args.get("search_Foodtype", "All")
+    if cuisine_option == "All":
         results = df.data
     else:
         results = df.data[df.data["Rcuisine"].str.contains(cuisine_option)]
 
     recs = []
     for result in results.to_dict("records"):
-        recs.append(Recommendation(result))
-
+      recs.append(Recommendation(result))
+      
     return recs
     
