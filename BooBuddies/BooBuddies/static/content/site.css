@@ -199,3 +199,11 @@ styledimg {
         
 }
 
+styledimg {
+
+    background-image: url(BooBuddies\BooBuddies\images\Logo.png);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 20px;
+        
+}
