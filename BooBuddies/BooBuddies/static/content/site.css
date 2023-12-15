@@ -9,6 +9,53 @@ body {
     padding-right: 15px;
 }
 
+.menuimage {
+    width: 200px;
+    height: 150px;    
+    background-image: url("../images/Menu.png");
+    background-repeat: no-repeat;
+    float:right;
+}
+
+.logoimage {
+    width: 200px;
+    height: 150px;    
+    background-image: url("../images/Logo.png");
+    background-repeat: no-repeat;
+    float:right;
+}
+
+.gifimage {
+    width: 200px;
+    height: 150px;    
+    background-image: url("../images/Hourssign.gif");
+    background-repeat: no-repeat;
+    float:right;
+}
+
+.chefimage {
+    width: 200px;
+    height: 150px;    
+    background-image: url("../images/Chef_Booyarde.png");
+    background-repeat: no-repeat;
+    float:right;
+}
+
+.mapimage {
+    width: 200px;
+    height: 150px;    
+    background-image: url("../images/Booglemaps.png");
+    background-repeat: no-repeat;
+    float:right;
+}
+
+.profileimage {
+    width: 200px;
+    height: 150px;    
+    background-image: url("../images/Profile.png");
+    background-repeat: no-repeat;
+    float:right;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -117,93 +164,3 @@ form.search-form button {
     }
 }
 
-styledimg {
-
-    background-image: url(BooBuddies\BooBuddies\images\BEEPBEEP.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-    
-}
-
-styledimg {
-
-    background-image: url(BooBuddies/BooBuddies/images/Booglemaps.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-styledimg {
-
-    background-image: url(BooBuddies/BooBuddies/images/Boorate.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-styledimg {
-
-    background-image: url(BooBuddies\BooBuddies\images\Chef_Booyarde.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-styledimg {
-
-    background-image: url(BooBuddies/BooBuddies/images/Hourssign.gif);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-
-styledimg {
-
-    background-image: url(BooBuddies\BooBuddies\images\Menu.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-styledimg {
-
-    background-image: url(BooBuddies/BooBuddies/images/MONEY.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-styledimg {
-
-    background-image: url(BooBuddies\BooBuddies\images\Profile.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-styledimg {
-
-    background-image: url(BooBuddies\BooBuddies\images\Register.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
-
-styledimg {
-
-    background-image: url(BooBuddies\BooBuddies\images\Logo.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px;
-        
-}
