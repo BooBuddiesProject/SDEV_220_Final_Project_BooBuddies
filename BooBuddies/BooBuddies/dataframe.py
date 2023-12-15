@@ -19,5 +19,5 @@ class DataFrame:
             df_combo = df_cuisine.merge(df_geo, on ="placeID").merge(df_rating, on = "placeID")
             df_combo = df_combo.drop_duplicates(subset=["placeID"])
             df_combo = df_combo.eval("rating = rating + food_rating + service_rating")
-            df_combo = df_combo[["placeID","Rcuisine", "rating","latitude", "longitude", "name", "price"]]
+            df_combo = df_combo[["placeID","Rcuisine", "rating","latitude", "longitude", "name", "price", "address", "city", "state"]]
             self.data = df_combo

@@ -6,11 +6,14 @@
 <h3>{{ message }}</h3>
 {% for result in results %}
     <p>The restaurant name is {{result.name}}</p>
+    {% if result.address != "?" %}
+    <p>The restaurant address is {{result.address}} , {{result.city}} , {{result.state}}</p>
+    {% else %}
+    <p>The restaurant address is unavailable. </p>
+    {% endif %}
     <p>The restaurant cuisine type is {{result.cuisine}}</p>
     <p>The restaurant price is {{result.price}}</p>
-    <p>The restaurant rating is {{result.rating}}</p>
-    <p>-------------------------------------------------------------</p>
-    
+    <hr style = "border-top: dotted 1px;" />
 {% endfor %}
 
 {% endblock %}

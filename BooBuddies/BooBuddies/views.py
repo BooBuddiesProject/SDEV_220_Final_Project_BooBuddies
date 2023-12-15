@@ -8,7 +8,7 @@ from datetime import datetime
 from flask import render_template, request, url_for
 from BooBuddies import app
 from .data import foodtypes_list, search_Cuisine
-from . import recommendations, dataframe
+from . import recommendations, dataframe, geolocate
 
 @app.route('/', methods =["GET",'PUT', "POST"])
 @app.route('/home', methods =["GET",'PUT', "POST"])
@@ -21,10 +21,6 @@ def home():
        search_FoodType=request.form.get("search_Foodtype")
        search_City = request.form.get("search_City")
        search_State = request.form.get("search_State")
-
-       search_string=search_City + " " + search_State + " " + search_FoodType
-       
-       print(search_Cuisine(search_FoodType))
 
        return render_template(
         'index.html',
@@ -43,6 +39,8 @@ def home():
         year=datetime.now().year,
         foodtypes= foodtypelist,
     )
+
+
 
 @app.route('/contact')
 def contact():
@@ -69,7 +67,9 @@ def search():
     """Renders the search results."""
     args = request.args
     df = dataframe.DataFrame()
-    results = recommendations.get_recs(df, args)
+    search_term = args.get("search-City", "") + "," + args.get("search-State", "")
+    p1 = geolocate.Geolocation(search_term).p1
+    results = recommendations.get_recs(df, args, p1)
     return render_template(
         'search.html',
         title='Search',

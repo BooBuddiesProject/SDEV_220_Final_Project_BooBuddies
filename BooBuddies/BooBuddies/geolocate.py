@@ -1,8 +1,5 @@
 import geopy as gp
 
-search_term = "South Bend Indiana"
-
-
 class Geolocation:
     
 
@@ -10,8 +7,7 @@ class Geolocation:
 
         self.loc = gp.Nominatim(user_agent="Boolocate")
         self.location = self.loc.geocode(search_term)
-        self.p1 = gp.Point(self.location.latitude, self.location.longitude)
-       
-loc1 = Geolocation(search_term)
+        self.p1 = (self.location.latitude, self.location.longitude)
 
-print(loc1.p1)
+
+        
