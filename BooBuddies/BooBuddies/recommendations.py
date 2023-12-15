@@ -22,5 +22,7 @@ def get_recs(df, args):
     for result in results.to_dict("records"):
       recs.append(Recommendation(result))
       
+    recs.sort(key = lambda x: x.rating, reverse = True)
+
     return recs
     

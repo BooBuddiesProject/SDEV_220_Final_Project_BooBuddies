@@ -1,10 +1,17 @@
 import geopy as gp
 
-class Geolocation
-
-    __init__(self):
-    loc = gp.Nominatim(user_agent="Boolocate")
-    get_loc = loc.geocode(search_city, search_state)
+search_term = "South Bend Indiana"
 
 
+class Geolocation:
+    
 
+    def __init__(self,search_term):
+
+        self.loc = gp.Nominatim(user_agent="Boolocate")
+        self.location = self.loc.geocode(search_term)
+        self.p1 = gp.Point(self.location.latitude, self.location.longitude)
+       
+loc1 = Geolocation(search_term)
+
+print(loc1.p1)
