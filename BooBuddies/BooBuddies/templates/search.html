@@ -4,6 +4,9 @@
 
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
+
+<img class="menuimage" src="{{url_for('static', filename='images/Menu.png')}}" />
+
 {% for result in results %}
     <p>The restaurant name is {{result.name}}</p>
     {% if result.address != "?" %}
@@ -15,5 +18,17 @@
     <p>The restaurant price is {{result.price}}</p>
     <hr style = "border-top: dotted 1px;" />
 {% endfor %}
+
+{{url_for('static', filename='Menu.png')}}
+
+
+<p>Use this area to provide additional information.</p>
+
+<img class="registerimage" src="{{url_for('static', filename='images/Register.png')}}" />
+{{url_for('static', filename='Register.png')}}
+
+<img class="registerimage" src="{{url_for('static', filename='images/MONEY.png')}}" />
+{{url_for('static', filename='MONEY.png')}}
+
 
 {% endblock %}
